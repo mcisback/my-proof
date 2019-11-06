@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+#my-get-proof-widget {
+  position: fixed;
+  bottom: 1%;
+  left: 1%;
+  z-index: 9999;
+  font-size: 14px;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0.2;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+#my-get-proof-widget #widget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: black;
+  width: 100%;
+  height: 100%;
+}
+
+#my-get-proof-widget #widget img {
+  width: 64px;
+  height: 64px;
+}
+
+#my-get-proof-widget #widget div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#my-get-proof-widget #widget div span.title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+#my-get-proof-widget #widget div span.action {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  word-wrap: break-word;
+}
+/*# sourceMappingURL=style.css.map */

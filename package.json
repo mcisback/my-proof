@@ -1,0 +1,15 @@
+{
+  "name": "mygetproof",
+  "version": "1.0.0",
+  "description": "proof",
+  "main": "mygetproof.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "proof",
+    "leads"
+  ],
+  "author": "Marco Caggiano",
+  "license": "ISC"
+}
