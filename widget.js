@@ -1,3 +1,5 @@
+// TODO: Node JS Backend
+
 var myWidgetApp = angular.module('widgetApp', [
     'ngAnimate'
 ])
@@ -39,10 +41,18 @@ var widgetCtrl = myWidgetApp.controller(
             action: 'Ha Appena Comprato Power Wireless',
             location: 'Salerno, IT'
 
+        },
+        {
+            img: `${imgUrl}`,
+            name: 'Zanzibar Amubebe',
+            action: 'Ha Appena Comprato Power Wireless',
+            location: 'Milano, IT'
+
         }
     ]
 
     $scope.count = 0
+    $scope.intervalTime = 5000
 
     widget.pickRandomPerson = function() {
         let randNumber = Math.floor(Math.random() * $scope.people.length)
@@ -58,7 +68,7 @@ var widgetCtrl = myWidgetApp.controller(
 
     $interval(() => {
         widget.pickRandomPerson()
-    }, 5000)
+    }, $scope.intervalTime)
 
     widget.pickRandomPerson()
     // widget.pickRandomPerson()
@@ -69,22 +79,25 @@ var widgetCtrl = myWidgetApp.controller(
     return function(scope, element, attr) {
         scope.$watch(attr.animateOnChange, function(nv,ov) {
             if (nv > ov || nv == 1) {
+                const transitionTime = '0.5'
+                const timeoutTime = 4000
+                
                 console.log('Value Changed')
 
                 console.log('Element is: ', element)
 
                 element.css('opacity', '0')
-                element.css('transition', 'all linear 0.5s')
+                element.css('transition', `all linear ${transitionTime}s`)
+                element.css('-moz-transition', `all linear ${transitionTime}s`)
+                element.css('-webkit-transition', `all linear ${transitionTime}s`)
                 element.css('opacity', '1')
-                
-                // element.removeClass('changed-out')
 
                 $timeout(function() {
-                    // element.css('opacity', '1')
-                    element.css('transition', 'all linear 0.5s')
+                    element.css('transition', `all linear ${transitionTime}s`)
+                    element.css('-moz-transition', `all linear ${transitionTime}s`)
+                    element.css('-webkit-transition', `all linear ${transitionTime}s`)
                     element.css('opacity', '0')
-                    // element.addClass('changed-out')
-                }, 4000) // Could be enhanced to take duration as a parameter*/
+                }, timeoutTime) // Could be enhanced to take duration as a parameter*/
             }
         })
     }
