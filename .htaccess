@@ -1,0 +1,2 @@
+RewriteRule index.html http://localhost:9999/ [P]
+RewriteRule (.*) http://localhost:9999/$1 [P]
